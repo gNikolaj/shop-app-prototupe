@@ -1,0 +1,16 @@
+.products-list {
+    margin: 20px auto;
+    width: 550px;
+    text-align: center;
+}
+
+.products-in-list {
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    border: 1px solid darkgray;
+    border-radius: 8px;
+    width: 500px;
+    height: 500px;
+}
