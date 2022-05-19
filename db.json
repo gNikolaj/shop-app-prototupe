@@ -4,21 +4,35 @@
       "id": 1,
       "name": "First",
       "count": 2,
-      "weight": "200g"
+      "weight": "200g",
+      "img": "https://www.nicepng.com/png/full/6-63005_candy-png-file-candy-png.png"
     },
     {
-      "id": 2,
       "name": "Second",
-      "count": 3,
-      "weight": "200g"
+      "count": "3",
+      "weight": "400g",
+      "img": "https://www.nicepng.com/png/full/6-63005_candy-png-file-candy-png.png",
+      "id": 2
     },
     {
+      "name": "Third",
+      "count": "5",
+      "weight": "500g",
+      "img": "https://www.nicepng.com/png/full/6-63005_candy-png-file-candy-png.png",
       "id": 3
     },
     {
+      "name": "Fourth",
+      "count": "12",
+      "weight": "2kg",
+      "img": "https://www.nicepng.com/png/full/6-63005_candy-png-file-candy-png.png",
       "id": 4
     },
     {
+      "name": "Fifth",
+      "count": "30",
+      "weight": "9kg",
+      "img": "https://www.nicepng.com/png/full/6-63005_candy-png-file-candy-png.png",
       "id": 5
     }
   ]

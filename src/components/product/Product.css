@@ -5,3 +5,11 @@
     height: 200px;
     margin: 20px auto 20px 20px;
 }
+
+.product img {
+    width: 120px;
+}
+
+.product button {
+    width: 100%;
+}

@@ -1,0 +1,23 @@
+.product-info-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid darkgray;
+    border-radius: 8px;
+    width: 420px;
+    height: 500px;
+}
+
+.product-info-content img {
+    width: 250px;
+}
+
+.product-info-content button {
+    background: #6FB2D2;
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100px;
+}

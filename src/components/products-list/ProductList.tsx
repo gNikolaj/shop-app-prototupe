@@ -1,49 +1,36 @@
 import React, {useEffect, useState} from 'react';
 import './ProductList.css';
 import Product from "../product/Product";
-import {getProducts} from "../../api";
-import axios from "axios";
-import Modal from "../modal/Modal";
+import {getProducts, postProducts} from "../../api";
+import {AxiosResponse} from "axios";
+import ModalForm from "../modal-form/ModalForm";
 
 const ProductList = () => {
-    const [productsList, setList] = useState([]);
-    const [idCounter, setIdCounter] = useState(0);
-    const [enteredProduct, setEnteredProduct] = useState({});
+    const [productsList, setList] = useState<object[]>([])
     const [showModal, setShowModal] = useState(false);
 
-
-    const addProduct = () => {
-        axios.post('http://localhost:8000/products', enteredProduct)
-            .then(() => {
-                getProducts().then((productsList) => {
-                    setList(productsList);
-                    setIdCounter(productsList[productsList.length - 1].id++);
-                })
+    const addProduct = (product: object) => {
+        postProducts(product).then((res: AxiosResponse<object>) => {
+            setList([...productsList, res.data]);
         })
-    }
-
-    const openModalWindow = () => {
-        setShowModal(true);
     }
 
     useEffect(() => {
         getProducts().then((productsList) => {
             setList(productsList);
-            setIdCounter(productsList[productsList.length - 1].id);
         })
     }, [])
 
     return (
         <div className='products-list'>
-            <div>Products List</div>
-            <Modal addProduct={addProduct} showModal={showModal} setShowModal={setShowModal}
-                   setEnteredProduct={setEnteredProduct} idCounter={idCounter}/>
+            {showModal && <ModalForm addProduct={addProduct} setShowModal={setShowModal}/>}
+            <h1>Products List</h1>
             <div className='products-in-list'>
-                {productsList.map((item:any) => (
+                {productsList.map((item: any) => (
                     <Product product={item} key={item.id}/>
                 ))}
             </div>
-            <button onClick={openModalWindow}>
+            <button className='add-product-btn' onClick={() => setShowModal(true)}>
                 Add product
             </button>
         </div>
