@@ -1,0 +1,25 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "First",
+      "count": 2,
+      "weight": "200g"
+    },
+    {
+      "id": 2,
+      "name": "Second",
+      "count": 3,
+      "weight": "200g"
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    }
+  ]
+}
